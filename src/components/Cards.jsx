@@ -3,8 +3,11 @@ import { FaHeart, FaSadCry } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Card = ({ item }) => {
-  const [isHeartFilled, setisHeartFilled] = useState(false);
-  const handleHeartClick = () => {};
+  const [isHeartFilled, setIsHeartFilled] = useState(false);
+  const handleHeartClick = () => {
+    setIsHeartFilled(!isHeartFilled);
+  };
+
   return (
     <div
       to={`/menu/${item._id}`}
